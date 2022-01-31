@@ -2,7 +2,7 @@
 
 # taste-food
 
-> ###
+> The Taste food web app is our JavaScript capstone project, Taste food is a web application based on an external food API, showing data about meals in different categories.
 
 ## Built With
 
