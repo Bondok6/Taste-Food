@@ -1,4 +1,5 @@
 import getMeals from "./getMeals.js";
+import likeIcon from "../img/heart-icon.svg";
 
 const renderMeals = async () => {
   const meals = await getMeals();
@@ -12,7 +13,7 @@ const renderMeals = async () => {
       <li class="card" id="${meal.idMeal}">
         <img class="card__img" src="${meal.strMealThumb}" alt="food-img">
         <h3> ${meal.strMeal} </h3>
-        <h4>Likes (<span>0</span>) <span>❤</span></h4>
+        <h4>Likes (<span>0</span>) <img class="like-icon" src="${likeIcon}" alt="like-icon"></h4>
         <button type="button" class="btn btn-details">Details</button>
       </li>
     `;
