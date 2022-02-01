@@ -33,7 +33,7 @@ const renderMeals = async () => {
       const { id } = e.target.parentNode.parentNode;
       const oldLikes = Number(span[ind].textContent);
       span[ind].textContent = oldLikes + 1;
-      postLike(id);
+      postLike(id); // send data(likes) to api
     });
   });
 };
