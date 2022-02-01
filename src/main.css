@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+:root {
+  --font-sans: "Lato", sans-serif;
+  --btn-color: #cc2008;
+  --text-color: #742a24;
 }
 
 html {
@@ -10,15 +18,57 @@ html {
 }
 
 body {
-  font-family: system-ui;
   font-size: 20px;
-  color: #555;
-  background-color: #f7f7f7;
+  background-color: #fff;
+  font-family: var(--font-sans);
 }
 
 ul {
   list-style: none;
 }
+
+/* Start Header and Footer section */
+header,
+footer {
+  width: 80vw;
+  height: 8vh;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-size: 3rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+  cursor: pointer;
+}
+
+.list-item:not(:last-child) {
+  border-right: 3px solid #000;
+  padding-right: 4rem;
+}
+
+.list-item:hover {
+  text-shadow: 0.5rem 1rem 2rem #000;
+}
+
+.logo {
+  display: block;
+  width: 22rem;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  letter-spacing: 0.5rem;
+}
+
+/* End Header and Footer section */
 
 /* Start main section */
 
@@ -67,6 +117,19 @@ main h2 {
   width: 100%;
   padding: 1rem;
   cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: var(--btn-color);
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.6s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--text-color);
+  color: #fff;
 }
 
 /* End main section */

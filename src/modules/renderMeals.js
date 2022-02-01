@@ -2,6 +2,7 @@ import getMeals from "./getMeals.js";
 
 const renderMeals = async () => {
   const meals = await getMeals();
+  console.log(meals);
   const numberOfmeals = document.querySelector(".meals-number");
   const container = document.querySelector(".card-container");
   let item = "";
