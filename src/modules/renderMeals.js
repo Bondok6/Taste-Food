@@ -1,12 +1,11 @@
-import getMeals from "./getMeals.js";
-import likeIcon from "../img/heart-icon.svg";
+import getMeals from './getMeals.js';
+import likeIcon from '../img/heart-icon.svg';
 
 const renderMeals = async () => {
   const meals = await getMeals();
-  console.log(meals);
-  const numberOfmeals = document.querySelector(".meals-number");
-  const container = document.querySelector(".card-container");
-  let item = "";
+  const numberOfmeals = document.querySelector('.meals-number');
+  const container = document.querySelector('.card-container');
+  let item = '';
 
   meals.forEach((meal) => {
     item += `
@@ -19,8 +18,8 @@ const renderMeals = async () => {
     `;
   });
 
-  numberOfmeals.insertAdjacentText("afterbegin", `(${meals.length})`);
-  container.insertAdjacentHTML("beforeend", item);
+  numberOfmeals.insertAdjacentText('afterbegin', `(${meals.length})`);
+  container.insertAdjacentHTML('beforeend', item);
 };
 
 export default renderMeals;
