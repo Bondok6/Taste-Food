@@ -118,6 +118,11 @@ main h2 {
   vertical-align: middle;
   margin: 0 1.5rem 0.4rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-icon:hover {
+  transform: scale(1.5);
 }
 
 .btn {
