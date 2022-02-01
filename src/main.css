@@ -1,17 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 :root {
   --font-sans: "Lato", sans-serif;
+  --btn-color: #cc2008;
+  --text-color: #742a24;
 }
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-  font-size: 10px;
+  font-size: 20px;
   background-color: #fff;
   font-family: var(--font-sans);
+}
+
+ul {
+  list-style: none;
 }
 
 /* Start Header and Footer section */
@@ -50,10 +63,80 @@ footer {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
-  left: 10%;
   letter-spacing: 0.5rem;
 }
 
 /* End Header and Footer section */
+
+/* Start main section */
+
+main {
+  margin: 0 auto;
+  padding: 4rem 0;
+  max-width: 150rem;
+}
+
+main h2 {
+  text-align: center;
+  margin: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: 2px solid #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.card__img {
+  display: block;
+  max-width: 30rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card__img:hover {
+  transform: scale(1.1);
+}
+
+.like-icon {
+  width: 2.5rem;
+  vertical-align: middle;
+  margin: 0 1.5rem 0.4rem;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: var(--btn-color);
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.6s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+/* End main section */
