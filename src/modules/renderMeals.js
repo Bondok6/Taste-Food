@@ -1,16 +1,16 @@
-import { getMeals, mealsLength } from "./getMeals.js";
-import { getLike, postLike } from "./handleLike.js";
-import likeIcon from "../img/heart.svg";
+import { getMeals, mealsLength } from './getMeals.js';
+import { getLike, postLike } from './handleLike.js';
+import likeIcon from '../img/heart.svg';
 
 const renderMeals = async () => {
   const meals = await getMeals(); // get Meals from API
   const mealsCount = await mealsLength(); // get the number of meals
   const likesNum = await getLike(); // get Likes from API
 
-  const numberOfmeals = document.querySelector(".meals-number");
-  const container = document.querySelector(".card-container");
+  const numberOfmeals = document.querySelector('.meals-number');
+  const container = document.querySelector('.card-container');
 
-  let item = "";
+  let item = '';
 
   meals.forEach((meal, ind) => {
     item += `
@@ -23,14 +23,14 @@ const renderMeals = async () => {
     `;
   });
 
-  numberOfmeals.insertAdjacentText("afterbegin", `(${mealsCount})`);
-  container.insertAdjacentHTML("beforeend", item);
+  numberOfmeals.insertAdjacentText('afterbegin', `(${mealsCount})`);
+  container.insertAdjacentHTML('beforeend', item);
 
-  const likes = document.querySelectorAll(".like-icon");
-  const span = document.querySelectorAll("h4>span");
+  const likes = document.querySelectorAll('.like-icon');
+  const span = document.querySelectorAll('h4>span');
 
   likes.forEach((like, ind) => {
-    like.addEventListener("click", (e) => {
+    like.addEventListener('click', (e) => {
       const { id } = e.target.parentNode.parentNode;
       const oldLikes = Number(span[ind].textContent);
       span[ind].textContent = oldLikes + 1;
