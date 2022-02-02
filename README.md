@@ -12,6 +12,7 @@
 
 ## Additional Used
 
+- npm
 - Webpack
 - API
 - ES6
