@@ -15,6 +15,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,6 +26,10 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  all: unset;
 }
 
 /* Start Header and Footer section */
@@ -60,12 +65,29 @@ footer {
 .logo {
   display: block;
   width: 22rem;
+  cursor: pointer;
 }
 
 footer {
   position: relative;
   bottom: 0;
   letter-spacing: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  header,
+  footer {
+    width: 95vw;
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    gap: 2rem;
+  }
+
+  .list-item:not(:last-child) {
+    padding-right: 2rem;
+  }
 }
 
 /* End Header and Footer section */
@@ -118,6 +140,11 @@ main h2 {
   vertical-align: middle;
   margin: 0 1.5rem 0.4rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.like-icon:hover {
+  transform: scale(1.5);
 }
 
 .btn {

@@ -7,7 +7,7 @@
     "start": "webpack serve --open",
     "build": "webpack",
     "deploy": "gh-pages -d dist",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
+    "jest-fetch-mock": "^3.0.3",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -43,5 +44,9 @@
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3"
   },
-  "main": "webpack.config.js"
+  "main": "webpack.config.js",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "node-fetch": "^3.2.0"
+  }
 }
