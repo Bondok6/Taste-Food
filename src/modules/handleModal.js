@@ -1,10 +1,12 @@
-// modal section
+import {
+  displayComments,
+  addComment,
+  commentsCounter,
+} from "./handleComments.js";
 
-import { displayComments, addComment } from './handleComments.js';
+let commentsLength = 0;
 
-const commentsLength = 0;
-
-const modalTemplate = (meal, idVideo) => `
+const modalTemplate = (meal, idVideo, commentsLength) => `
         <button class="close-modal-btn">x</button>
           <div class="modal-header">
             <figure>
@@ -35,7 +37,7 @@ const modalTemplate = (meal, idVideo) => `
             <p class="description">${meal.strInstructions}</p>
           </div>
           <div class="info-container comments">
-            <h3>Comments (${commentsLength})</h2>
+            <h3>Comments (<span class="counter">${commentsLength}</span>)</h2>
             <ul class="comment-container"></ul>
             <h3>Add a comment</h2>
             <div class="msgErrorContainer"></div>
@@ -50,44 +52,46 @@ const modalTemplate = (meal, idVideo) => `
           </div>
   `;
 
-const modalSection = document.querySelector('.modal-container');
-const $body = document.querySelector('body');
+const modalSection = document.querySelector(".modal-container");
+const $body = document.querySelector("body");
 
 function openModal() {
-  modalSection.classList.add('show-modal');
-  $body.classList.add('overflow-hidden');
+  modalSection.classList.add("show-modal");
+  $body.classList.add("overflow-hidden");
 }
 
 function closeModal() {
-  modalSection.classList.remove('show-modal');
-  $body.classList.remove('overflow-hidden');
-  modalSection.innerHTML = '';
+  modalSection.classList.remove("show-modal");
+  $body.classList.remove("overflow-hidden");
+  modalSection.innerHTML = "";
 }
 
-const createModal = (mealData) => {
+const createModal = (mealData, commentsLength) => {
   const idVideo = mealData[0].strYoutube.slice(32);
-  const modalArticle = document.createElement('div');
-  modalArticle.className = 'modal-card';
-  modalArticle.innerHTML = modalTemplate(mealData[0], idVideo);
+  const modalArticle = document.createElement("div");
+  modalArticle.className = "modal-card";
+  modalArticle.innerHTML = modalTemplate(mealData[0], idVideo, commentsLength);
   modalSection.appendChild(modalArticle);
-  const closeModalBtn = document.querySelector('.close-modal-btn');
-  closeModalBtn.addEventListener('click', closeModal);
+  const closeModalBtn = document.querySelector(".close-modal-btn");
+  closeModalBtn.addEventListener("click", closeModal);
 };
 
 const handleModal = (meals) => {
-  const openModalBtn = document.querySelectorAll('.btn-details');
+  const openModalBtn = document.querySelectorAll(".btn-details");
 
   openModalBtn.forEach((btn, index) => {
-    btn.addEventListener('click', async () => {
+    btn.addEventListener("click", async () => {
       openModal();
-      const urlBase = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+      commentsLength = await commentsCounter(meals[index].idMeal);
+      const urlBase = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
       const url = `${urlBase}${meals[index].idMeal}`;
       const mealData = await fetch(url)
         .then((response) => response.json())
         .then((data) => data.meals);
-      createModal(mealData);
-      const form = document.querySelector('form');
-      form.addEventListener('submit', (event) => {
+
+      createModal(mealData, commentsLength);
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (event) => {
         addComment(event, form, meals[index].idMeal);
       });
 
