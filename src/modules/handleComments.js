@@ -1,7 +1,6 @@
 import fetch from 'cross-fetch';
 
 const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
-
 const appID = 'xXV7QwFcLUFKVHZPVZim';
 
 const postComment = async (username, comment, idMeal) => {
@@ -72,8 +71,5 @@ const addComment = async (event, form, idMeal) => {
 };
 
 export {
-  displayComments,
-  addComment,
-  commentsCounter,
-  getComment,
+  displayComments, addComment, commentsCounter, getComment,
 };
