@@ -55,16 +55,16 @@ const modalTemplate = (meal, idVideo, commentsLength) => `
 const modalSection = document.querySelector(".modal-container");
 const $body = document.querySelector("body");
 
-function openModal() {
+const openModal = () => {
   modalSection.classList.add("show-modal");
   $body.classList.add("overflow-hidden");
-}
+};
 
-function closeModal() {
+const closeModal = () => {
   modalSection.classList.remove("show-modal");
   $body.classList.remove("overflow-hidden");
   modalSection.innerHTML = "";
-}
+};
 
 const createModal = (mealData, commentsLength) => {
   const idVideo = mealData[0].strYoutube.slice(32);
