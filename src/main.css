@@ -49,6 +49,7 @@ footer {
   margin: 2rem auto;
   padding: 0 2rem;
   font-size: 3rem;
+  z-index: 1;
 }
 
 .nav-list {
@@ -186,6 +187,7 @@ main h2 {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(0.5rem);
+  z-index: 5;
 }
 
 .show-modal {
@@ -224,12 +226,12 @@ main h2 {
   z-index: 10;
 }
 
-.closePopUpBtn:hover {
+.close-modal-btn:hover {
   color: #fff;
   background-color: var(--btn-color);
 }
 
-.closePopUpBtn:active {
+.close-modal-btn:active {
   color: #fff;
   background-color: var(--text-color);
 }
@@ -266,6 +268,12 @@ main h2 {
   z-index: 1;
 }
 
+.modal-card iframe {
+  height: 40rem;
+  width: 100%;
+  border-radius: 20px;
+}
+
 .modal-card .info-container {
   width: 100%;
   display: flex;
@@ -290,12 +298,23 @@ main h2 {
 .modal-card p {
   width: 90%;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
 }
 
 .modal-card p span {
-  font-weight: 700;
-  margin-right: 1rem;
+  display: inline-block;
+  font-weight: 300;
+  color: #000;
+  background-color: rgba(243, 165, 2, 0.2);
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  font-size: 1.6rem;
+}
+
+.modal-card p.description {
+  text-align: justify;
 }
 
 /* End modal section */
@@ -322,3 +341,58 @@ main h2 {
 }
 
 /* End scrollbar section */
+
+/* Start comment section */
+
+.comments ul {
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 1.8rem;
+}
+
+.comments ul li {
+  background-color: #eee;
+  padding: 1.6rem 2.8rem;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+}
+
+.comments ul li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.comments ul li span:first-child {
+  margin-right: 1rem;
+}
+
+.comments ul li span:last-child {
+  font-weight: 300;
+}
+
+.comments form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.comments h2 {
+  margin-bottom: 2rem;
+}
+
+.comments .msgErrorContainer {
+  color: red;
+  margin-bottom: 2rem;
+}
+
+.comments form input,
+.comments form textarea {
+  font-family: var(--font-sans);
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 1rem;
+  resize: none;;
+}
+
+/* End comment section */
