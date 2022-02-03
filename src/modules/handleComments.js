@@ -1,5 +1,8 @@
+import fetch from 'cross-fetch';
+
 const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
-const appID = 'cEtwlqneMRRYCtlfnIeQ';
+
+const appID = 'xXV7QwFcLUFKVHZPVZim';
 
 const postComment = async (username, comment, idMeal) => {
   const resolve = await fetch(`${baseURL}/${appID}/comments`, {
@@ -23,11 +26,19 @@ const getComment = async (idMeal) => {
   return result;
 };
 
+const commentsCounter = async (idMeal) => {
+  const commentsNum = await getComment(idMeal);
+  if (!commentsNum.length) {
+    return 0;
+  }
+  return commentsNum.length;
+};
+
 const commentTemplate = (date, name, comment) => `
   <li>
-  <span>${date}</span>
-  <span>${name}: </span>
-  <span>${comment}</span>
+    <span>${date}</span>
+    <span>${name}: </span>
+    <span>${comment}</span>
   </li>
 `;
 
@@ -50,12 +61,19 @@ const displayComments = async (idMeal) => {
 
 const addComment = async (event, form, idMeal) => {
   event.preventDefault();
+  const number = document.querySelector('.counter');
   const name = form.querySelector('input');
   const comment = form.querySelector('textarea');
 
   await postComment(name.value, comment.value, idMeal);
   await displayComments(idMeal);
+  number.textContent = await commentsCounter(idMeal);
   form.reset();
 };
 
-export { displayComments, addComment };
+export {
+  displayComments,
+  addComment,
+  commentsCounter,
+  getComment,
+};
