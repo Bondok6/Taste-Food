@@ -2,7 +2,7 @@
 
 # taste-food
 
-> The Taste food web app is our JavaScript capstone project, Taste food is a web application based on an external food API, showing data about meals in different categories.
+> The Taste food web app is our JavaScript capstone project, Taste food is a web application based on an external food API [TheMealDB](https://www.themealdb.com/api.php), showing data about italian foods and we used Used [involvement](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) API to record the different user interactions (likes, comments).
 
 ## Built With
 
@@ -20,6 +20,10 @@
 ## Live Demo
 
 [taste-food link](https://bondok6.github.io/taste-food/)
+
+## Video Link
+
+[Video Link]()
 
 ## Getting Started
 
