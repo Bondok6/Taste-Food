@@ -2,7 +2,7 @@ import {
   displayComments,
   addComment,
   commentsCounter,
-} from "./handleComments.js";
+} from './handleComments.js';
 
 let commentsLength = 0;
 
@@ -52,46 +52,46 @@ const modalTemplate = (meal, idVideo, commentsLength) => `
           </div>
   `;
 
-const modalSection = document.querySelector(".modal-container");
-const $body = document.querySelector("body");
+const modalSection = document.querySelector('.modal-container');
+const $body = document.querySelector('body');
 
 const openModal = () => {
-  modalSection.classList.add("show-modal");
-  $body.classList.add("overflow-hidden");
+  modalSection.classList.add('show-modal');
+  $body.classList.add('overflow-hidden');
 };
 
 const closeModal = () => {
-  modalSection.classList.remove("show-modal");
-  $body.classList.remove("overflow-hidden");
-  modalSection.innerHTML = "";
+  modalSection.classList.remove('show-modal');
+  $body.classList.remove('overflow-hidden');
+  modalSection.innerHTML = '';
 };
 
 const createModal = (mealData, commentsLength) => {
   const idVideo = mealData[0].strYoutube.slice(32);
-  const modalArticle = document.createElement("div");
-  modalArticle.className = "modal-card";
+  const modalArticle = document.createElement('div');
+  modalArticle.className = 'modal-card';
   modalArticle.innerHTML = modalTemplate(mealData[0], idVideo, commentsLength);
   modalSection.appendChild(modalArticle);
-  const closeModalBtn = document.querySelector(".close-modal-btn");
-  closeModalBtn.addEventListener("click", closeModal);
+  const closeModalBtn = document.querySelector('.close-modal-btn');
+  closeModalBtn.addEventListener('click', closeModal);
 };
 
 const handleModal = (meals) => {
-  const openModalBtn = document.querySelectorAll(".btn-details");
+  const openModalBtn = document.querySelectorAll('.btn-details');
 
   openModalBtn.forEach((btn, index) => {
-    btn.addEventListener("click", async () => {
+    btn.addEventListener('click', async () => {
       openModal();
       commentsLength = await commentsCounter(meals[index].idMeal);
-      const urlBase = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
+      const urlBase = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
       const url = `${urlBase}${meals[index].idMeal}`;
       const mealData = await fetch(url)
         .then((response) => response.json())
         .then((data) => data.meals);
 
       createModal(mealData, commentsLength);
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (event) => {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
         addComment(event, form, meals[index].idMeal);
       });
 
