@@ -27,10 +27,6 @@ https://user-images.githubusercontent.com/45231276/152481089-d6334275-76c3-4962-
 
 [taste-food Link](https://bondok6.github.io/taste-food/)
 
-## Video Link
-
-[Video Link](https://drive.google.com/file/d/1Dngkm41b9QeRYbXcXKo98TmDrgEMijpz/view?usp=sharing)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
