@@ -20,15 +20,23 @@
 
       <nav>
         <ul class="nav-list">
-          <li class="list-item"><a href="#">Home</a></li>
+          <li class="list-item" id="home"><a href="">Home</a></li>
           <li class="list-item"><a href="#footer">CopyRight</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h2>Italian Food <span class="meals-number"></span></h2>
-      <ul class="card-container"></ul>
+
+      <section class="categories-section">
+        <h2>Choose Your Categories (<span class="categories-number"></span>)</h2>
+        <ul class="card-container" id="categories"></ul>
+      </section>
+
+      <section class="meals-section hidden">
+        <h2> Number of Meals <span class="meals-number"></span></h2>
+        <ul class="card-container" id="meals"></ul>
+      </section>
     </main>
 
     <footer id="footer">

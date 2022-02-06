@@ -22,6 +22,10 @@ const getComment = async (idMeal) => {
   const resolve = await fetch(`${baseURL}/${appID}/comments?item_id=${idMeal}`);
   const result = await resolve.json();
 
+  if (!result.length) {
+    return [];
+  }
+
   return result;
 };
 
