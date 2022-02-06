@@ -1,8 +1,8 @@
-import fetch from "cross-fetch";
+import fetch from 'cross-fetch';
 
 const getCategories = async () => {
   const res = await fetch(
-    "https://www.themealdb.com/api/json/v1/1/categories.php"
+    'https://www.themealdb.com/api/json/v1/1/categories.php',
   );
   const data = await res.json();
   const { categories } = data;
@@ -11,7 +11,7 @@ const getCategories = async () => {
 
 const getMeals = async (category) => {
   const resolve = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`,
   );
 
   const data = await resolve.json();
@@ -29,4 +29,6 @@ const mealsLength = async (category) => {
   return mealsArr.length;
 };
 
-export { getMeals, mealsLength, getCategories, categoriesLength };
+export {
+  getMeals, mealsLength, getCategories, categoriesLength,
+};
