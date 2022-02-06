@@ -1,4 +1,7 @@
-import './main.css';
-import renderMeals from './modules/renderMeals.js';
+import "./main.css";
+// import renderMeals from "./modules/renderMeals.js";
+import renderCategories from "./modules/renderCategories.js";
 
-renderMeals();
+renderCategories();
+
+// renderMeals();

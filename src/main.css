@@ -396,3 +396,10 @@ main h2 {
 }
 
 /* End comment section */
+
+/* Start Categories Section */
+.hidden {
+  display: none;
+}
+
+/* End Categories Section */
