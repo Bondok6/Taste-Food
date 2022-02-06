@@ -1,16 +1,14 @@
-import { getCategories } from "./getMeals";
-import renderMeals from "./renderMeals";
+import { getCategories } from './getMeals.js';
+import renderMeals from './renderMeals.js';
 
 const renderCategories = async () => {
   const categories = await getCategories();
 
-  const categoriesContainer = document.querySelector("#categories");
-  const categoriesSection = document.querySelector(".categories-section");
-  const mealsSection = document.querySelector(".meals-section");
+  const categoriesContainer = document.querySelector('#categories');
+  const categoriesSection = document.querySelector('.categories-section');
+  const mealsSection = document.querySelector('.meals-section');
 
-  console.log(categories);
-
-  let itemHtml = "";
+  let itemHtml = '';
 
   categories.forEach((category) => {
     itemHtml += `
@@ -22,15 +20,14 @@ const renderCategories = async () => {
     `;
   });
 
-  categoriesContainer.insertAdjacentHTML("beforeend", itemHtml);
+  categoriesContainer.insertAdjacentHTML('beforeend', itemHtml);
 
-  document.querySelectorAll(".btn-category").forEach((btn) => {
-    btn.addEventListener("click", async (e) => {
-      const category =
-        e.target.previousSibling.previousSibling.firstChild.textContent;
+  document.querySelectorAll('.btn-category').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      const category = e.target.previousSibling.previousSibling.firstChild.textContent;
 
-      categoriesSection.classList.add("hidden");
-      mealsSection.classList.remove("hidden");
+      categoriesSection.classList.add('hidden');
+      mealsSection.classList.remove('hidden');
 
       await renderMeals(category);
     });

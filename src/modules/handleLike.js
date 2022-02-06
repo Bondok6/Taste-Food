@@ -1,12 +1,11 @@
-const baseURL =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/";
-const appID = "O1gUGEw2wHMxihV7khuJ";
+const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const appID = 'O1gUGEw2wHMxihV7khuJ';
 
 const postLike = async (id) => {
   const resolve = await fetch(`${baseURL}${appID}/likes/`, {
-    method: "POST",
+    method: 'POST',
     body: JSON.stringify({ item_id: id }),
-    headers: { "Content-type": "application/JSON" },
+    headers: { 'Content-type': 'application/JSON' },
   });
 
   return resolve;
