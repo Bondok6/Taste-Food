@@ -5,7 +5,7 @@
 > The Taste food web app is our JavaScript capstone project, Taste food is a web application based on an external food API [TheMealDB](https://www.themealdb.com/api.php), showing data about italian foods and we used Used [involvement](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) API to record the different user interactions (likes, comments).
 
 
-https://user-images.githubusercontent.com/45231276/152481089-d6334275-76c3-4962-b840-635cf072590b.mp4
+https://user-images.githubusercontent.com/45231276/152669517-b90138a3-32d6-4843-a4da-aa01634e81d2.mp4
 
 
 ## Built With
@@ -16,11 +16,11 @@ https://user-images.githubusercontent.com/45231276/152481089-d6334275-76c3-4962-
 
 ## Additional Used
 
-- npm
-- Jest
-- Webpack
 - API
-- ES6
+- ES6 (Modules)
+- npm
+- Jest (testing)
+- Webpack
 - Linters
 
 ## Live Demo
