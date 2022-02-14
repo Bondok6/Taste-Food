@@ -25,7 +25,7 @@ https://user-images.githubusercontent.com/45231276/152669517-b90138a3-32d6-4843-
 
 ## Live Demo
 
-[taste-food Link](https://bondok6.github.io/taste-food/)
+[taste-food Link](https://bondok6.github.io/Taste-Food/)
 
 ## Getting Started
 
