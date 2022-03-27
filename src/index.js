@@ -15,6 +15,6 @@ document.addEventListener('click', (e) => {
 });
 
 // prettier-ignore
-window.addEventListener('resize', (e) =>  e.target.innerWidth > 800 ? showNav() : hideNav());
+window.addEventListener('resize', (e) => e.target.innerWidth > 800 ? showNav() : hideNav());
 
 renderCategories();
