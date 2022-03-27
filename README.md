@@ -31,13 +31,23 @@ https://user-images.githubusercontent.com/45231276/152669517-b90138a3-32d6-4843-
 
 To get a local copy up and running follow these simple example steps.
 
-`git clone git@github.com:Bondok6/taste-food.git`
+```bash
+> git clone git@github.com:Bondok6/Taste-Food.git
+> `cd Taste-Food`
+```
 
-Then `cd taste-food`
+To run the project.
 
-Then `npm install` to install packages
+```bash
+$ npm install
+$ npm run start
+```
 
-Finally `npm run start`
+To run tests.
+
+```bash
+$ npm test
+```
 
 ## Authors
 
