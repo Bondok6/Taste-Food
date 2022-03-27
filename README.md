@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# taste-food
+# Taste Food
 
 > The Taste food web app is our JavaScript capstone project, Taste food is a web application based on an external food API [TheMealDB](https://www.themealdb.com/api.php), showing data about different types of foods and we used [involvement](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) API to record the different user interactions (likes, comments).
 
