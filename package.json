@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "description": "",
+  "description": "Taste food is a web application based on an external food API showing data about different types of foods and we used involvement API to record the different user interactions (likes, comments).",
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bondok6/taste-food.git"
+    "url": "git+https://github.com/Bondok6/Taste-Food.git"
   },
   "keywords": [],
   "author": "Andres & Kyrillos",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bondok6/taste-food/issues"
+    "url": "https://github.com/Bondok6/Taste-Food/issues"
   },
-  "homepage": "https://github.com/Bondok6/taste-food#readme",
+  "homepage": "https://github.com/Bondok6/Taste-Food",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "babel-eslint": "^10.1.0",
