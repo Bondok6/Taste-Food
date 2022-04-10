@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 ```bash
 > git clone git@github.com:Bondok6/Taste-Food.git
-> `cd Taste-Food`
+> cd Taste-Food
 ```
 
 To run the project.
