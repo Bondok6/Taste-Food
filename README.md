@@ -22,6 +22,7 @@ https://user-images.githubusercontent.com/45231276/152669517-b90138a3-32d6-4843-
 - Jest (testing)
 - Webpack
 - Linters
+- Gitflows
 
 ## Live Demo
 
