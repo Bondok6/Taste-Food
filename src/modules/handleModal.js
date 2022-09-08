@@ -22,15 +22,15 @@ const modalTemplate = (meal, idVideo, commentsLength) => `
             allowfullscreen>
             </iframe>
           </div>
-          <div class="info-container">
+          <div class="info-container ingredients-container">
             <h3>Ingredients:</h2>
-            <p class="Ingredients">
-            <span>${meal.strIngredient1}: ${meal.strMeasure1}</span>
-            <span>${meal.strIngredient2}: ${meal.strMeasure2}</span>
-            <span>${meal.strIngredient3}: ${meal.strMeasure3}</span>
-            <span>${meal.strIngredient4}: ${meal.strMeasure4}</span>
-            <span>${meal.strIngredient5}: ${meal.strMeasure5}</span>
-            </p>
+            <div class="ingredients">
+              <span>${meal.strIngredient1}: ${meal.strMeasure1}</span>
+              <span>${meal.strIngredient2}: ${meal.strMeasure2}</span>
+              <span>${meal.strIngredient3}: ${meal.strMeasure3}</span>
+              <span>${meal.strIngredient4}: ${meal.strMeasure4}</span>
+              <span>${meal.strIngredient5}: ${meal.strMeasure5}</span>
+            </div>
           </div>
           <div class="info-container">
             <h3>Instructions:</h2>
