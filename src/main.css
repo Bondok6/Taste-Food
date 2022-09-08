@@ -108,7 +108,6 @@ footer {
   }
 
   nav {
-    opacity: 0;
     position: fixed;
     top: 8rem;
     right: 4rem;
@@ -129,6 +128,10 @@ footer {
 
   .list-item:not(:last-child) {
     border: none;
+  }
+
+  .list-item:hover {
+    color: var(--text-color);
   }
 
   .menu {
