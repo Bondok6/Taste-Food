@@ -317,7 +317,6 @@ main h2 {
   font-size: 1.6rem;
 }
 
-
 .modal-card h3 {
   width: 100%;
   color: #fff;
@@ -350,7 +349,7 @@ main h2 {
 
 .modal-card form input,
 .modal-card form textarea {
-  font-size: 1.8rem;;
+  font-size: 1.8rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -373,7 +372,7 @@ main h2 {
     margin-bottom: 2rem;
     font-size: 1.6rem;
   }
-  
+
   .modal-card p {
     width: 100%;
     text-align: justify;
@@ -386,14 +385,14 @@ main h2 {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .modal-card form {
     width: 90%;
   }
 
   .modal-card form input,
   .modal-card form textarea {
-    font-size: 2rem;;
+    font-size: 2rem;
   }
 
   .close-modal-btn {
@@ -402,7 +401,6 @@ main h2 {
     align-self: flex-end;
   }
 }
-
 
 /* End modal section */
 
