@@ -11,6 +11,7 @@
   --font-sans: 'Lato', sans-serif;
   --btn-color: #cc2008;
   --text-color: #23180d;
+  --white-color: #fcf7cc;
 }
 
 html {
@@ -20,9 +21,12 @@ html {
 }
 
 body {
-  font-size: 20px;
-  background-color: #fff;
+  font-size: 2rem;
+  background-color: var(--white-color);
   font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .overflow-hidden {
@@ -38,18 +42,25 @@ a {
 }
 
 /* Start Header and Footer section */
+
 header,
 footer {
   width: 80vw;
-  height: 8vh;
-  border: 1px solid #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 1;
+  background-color: white; 
+  padding: 4rem 4rem 2rem 4rem;
+  color: var(--text-color);
+}
+
+header {
+  border-radius: 0 0 4rem 4rem;
+  box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
+  -webkit-box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
 }
 
 .nav-list {
@@ -60,12 +71,12 @@ footer {
 }
 
 .list-item:not(:last-child) {
-  border-right: 3px solid #000;
+  border-right: 1px solid var(--text-color);
   padding-right: 4rem;
 }
 
 .list-item:hover {
-  text-shadow: 0.5rem 1rem 2rem #000;
+  color: var(--btn-color);
 }
 
 .logo {
@@ -78,6 +89,11 @@ footer {
   position: relative;
   bottom: 0;
   letter-spacing: 0.5rem;
+  justify-content: center;
+  border-radius: 4rem 4rem 0 0 ;
+  box-shadow: 11px -11px 17px -10px rgba(0,0,0,0.52);
+  -webkit-box-shadow: 11px -11px 17px -10px rgba(0,0,0,0.52);
+  -moz-box-shadow: 11px -11px 17px -10px rgba(0,0,0,0.52);
 }
 
 .menu {
@@ -134,10 +150,17 @@ main {
 
 main h2 {
   text-align: center;
-  margin: 3rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--btn-color);
+}
+
+main h3 {
+  margin-top: 2rem;
 }
 
 .card-container {
+  width: 80vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -146,13 +169,16 @@ main h2 {
 }
 
 .card {
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  border: 2px solid #222;
   border-radius: 12px;
   padding: 1.5rem;
+  box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
+  -webkit-box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
 }
 
 .card__img {
