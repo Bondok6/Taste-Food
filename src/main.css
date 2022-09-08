@@ -61,6 +61,7 @@ header {
   box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
   -webkit-box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
   -moz-box-shadow: 10px 10px 17px -10px rgba(0,0,0,0.52);
+  position: fixed;
 }
 
 .nav-list {
@@ -94,6 +95,10 @@ footer {
   box-shadow: 11px -11px 17px -10px rgba(0,0,0,0.52);
   -webkit-box-shadow: 11px -11px 17px -10px rgba(0,0,0,0.52);
   -moz-box-shadow: 11px -11px 17px -10px rgba(0,0,0,0.52);
+}
+
+footer h3 {
+  text-align: center;
 }
 
 .menu {
@@ -146,7 +151,7 @@ footer {
 /* Start main section */
 
 main {
-  margin: 0 auto;
+  margin: 10rem auto; 
   padding: 4rem 0;
   max-width: 150rem;
 }
