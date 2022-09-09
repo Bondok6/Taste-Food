@@ -11,9 +11,10 @@ const hideNav = () => {
 
 document.addEventListener('click', (e) => {
   const menuIcon = document.querySelector('.menu img');
-  if(window.innerWidth < 800) {
+  if (window.innerWidth < 800) {
     return e.target === menuIcon ? showNav() : hideNav();
   }
+  return
 });
 
 // prettier-ignore
